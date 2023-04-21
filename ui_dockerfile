@@ -1,0 +1,12 @@
+FROM python:3.8-slim-buster
+
+WORKDIR /app
+
+COPY templates templates
+
+RUN pip install flask requests pymongo datetime 
+
+COPY ui.py .
+
+
+CMD ["python", "ui.py"]
