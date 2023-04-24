@@ -1,0 +1,53 @@
+{% extends 'base.html'%} 
+{% block title %} Home {% endblock %} 
+{% block content %}
+
+    <div class="container mt-5 mb-5 px-10 ">
+        
+        <div class="row">
+            {% if (posts is defined) and posts %} 
+           
+            {% for post in posts %}
+            <div class="col-md-6 offset-md-3 mb-2 ">
+                <br/>
+                <div class="card">
+                    {% if post['image'] %}
+                    <img src="{{ post['image'] }}">
+                    {% endif %}
+
+                    <div class="card-body">
+                        <p class="card-text text-muted">
+                            {{ post['p_name'] }}
+                            {{user}}
+                        </p>
+                        <h4 class="card-title">{{ post['price'] }}</h4>
+                        <h6 class="card-title">- {{ post['quantity'] }}</h6>
+                      
+
+                        <!-- <div class="d-flex justify-content-between">
+                            <a href="/edit-post?form={{ post['_id'] }}" class="btn btn-primary"> -->
+                                
+                            </a>
+                            <form method="POST" action="/delete-post">
+                                <input type="hidden" name="_id" value="{{ post['_id'] }}" />
+                                <a type="submit" class="btn btn-danger" href="/addtocart?form={{ post['_id']}}+{{user}}">Add to cart</a>
+                               
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            
+            {% endfor %} {% else %}
+           
+            <div class="col-md-6 offset-md-3 text-center">
+                <h4>You have not created any posts</h4>
+            </div>
+            {% endif %}
+        </div>
+        
+    </div>
+    <a type="submit" class="btn btn-danger" style="margin-left: 49%; margin-top: 3%;"href="/shopping_cart?form={{user}}">Go to Cart </a>
+{% endblock %}
