@@ -1,11 +1,11 @@
 pipeline {
     agent any
-    
     stages {
         stage('Build') {
             steps {
                 bat 'copy.bat'
                 bat 'docker build -t uc1 ./uc1'
+                bat 'docker login -u ${rhea19} -p ${Rhea@1912} ${https://index.docker.io/v1/}'
                 bat 'docker tag uc1 rhea19/uc1:latest'
                 bat 'docker push rhea19/uc1:latest'
                 bat 'docker build -t uc2 ./uc2'
