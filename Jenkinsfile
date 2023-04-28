@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        DOCKER_CREDENTIALS = credentials('docker-credentials')
+    }
     stages {
         stage('Build') {
             steps {
