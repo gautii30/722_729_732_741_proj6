@@ -46,7 +46,7 @@ function Search() {
         <div className="flex justify-center container px-5 py-5 mx-auto w-full ">
         <div className="grid grid-cols-2 gap-2 items-center lg:grid lg:grid-cols-4 lg:gap-4">
         {plist.map((n) => (
-                        <Display key={n._id} name={n.name} imgsrc={n.imgsrc} desc={n.desc} price={n.price} id={n._id} />))}
+                        <Display key={n._id} name={n.name} imgsrc={"logo512.png"} desc={n.desc} price={n.price} id={n._id} />))}
         </div>
         </div>
     </div> );

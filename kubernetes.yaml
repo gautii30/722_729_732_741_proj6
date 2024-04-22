@@ -18,6 +18,7 @@ spec:
         image: abishekd/frontend:latest
         ports:
         - containerPort: 3000
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -39,6 +40,10 @@ spec:
         image: akarshj21/uc1:latest
         ports:
         - containerPort: 5001
+        env:
+        - name: MURL
+          value: "mongodb://192.168.157.204:27017"
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -60,6 +65,10 @@ spec:
         image: akarshj21/uc2:latest
         ports:
         - containerPort: 5002
+        env:
+        - name: MURL
+          value: "mongodb://192.168.157.204:27017"
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -81,6 +90,10 @@ spec:
         image: akarshj21/uc3:latest
         ports:
         - containerPort: 5003
+        env:
+        - name: MURL
+          value: "mongodb://192.168.157.204:27017"
+
 ---
 apiVersion: v1
 kind: Service
@@ -92,8 +105,9 @@ spec:
     app: frontend
   ports:
   - protocol: TCP
-    port: 3000
+    port: 3002
     targetPort: 3000
+
 ---
 apiVersion: v1
 kind: Service
@@ -121,6 +135,7 @@ spec:
   - protocol: TCP
     port: 5002
     targetPort: 5002
+
 ---
 apiVersion: v1
 kind: Service
