@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'copy.bat'
+                bat 'copy.sh'
                 bat 'docker build -t uc1 ./uc1'
                 bat 'docker login -u ${gautii30} -p ${sarafgautam051539} ${https://index.docker.io/v1/}'
                 bat 'docker tag uc1 rhea19/uc1:latest'
