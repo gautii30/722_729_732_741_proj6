@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Display from "./display";
 import { useNavigate } from "react-router-dom";
-
+// gautam
 function Search() {
     const nav= useNavigate()
     const [query,setquery]=useState()
