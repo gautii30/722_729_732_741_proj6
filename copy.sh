@@ -1,3 +1,7 @@
-cp '/Users/gautam/Desktop/sem-6/cloud\ computing/ccprojf/E-commerce-microservices-application/uc1/.env' /Users/gautam/.jenkins/workspace/cc_demo/uc1
-cp '/Users/gautam/Desktop/sem-6/cloud\ computing/ccprojf/E-commerce-microservices-application/uc2/.env' /Users/gautam/.jenkins/workspace/cc_demo/uc2
-cp '/Users/gautam/Desktop/sem-6/cloud\ computing/ccprojf/E-commerce-microservices-application/uc3/.env' /Users/gautam/.jenkins/workspace/cc_demo/uc3
+#!/bin/bash
+set -e # Exit on error
+
+# Copy .env files within the Jenkins workspace
+cp /var/jenkins_home/workspace/proj6/uc1/.env /var/jenkins_home/workspace/proj6/uc1/
+cp /var/jenkins_home/workspace/proj6/uc2/.env /var/jenkins_home/workspace/proj6/uc2/
+cp /var/jenkins_home/workspace/proj6/uc3/.env /var/jenkins_home/workspace/proj6/uc3/
