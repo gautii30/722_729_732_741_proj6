@@ -31,7 +31,7 @@ function Navbar() {
     <nav className="bg-white border-gray-200 dark:bg-red-500">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Upshop</span>
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">e-commerce website</span>
         </a>
         <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg  md:flex-row md:space-x-5 md:mt-0 md:border-0  ">
