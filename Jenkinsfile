@@ -34,6 +34,7 @@ pipeline {
             steps {
                 // Apply Kubernetes configurations
                 sh 'kubectl apply -f kubernetes.yaml'
+                echo 'Deployed'
             }
         }
     }
