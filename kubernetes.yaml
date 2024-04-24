@@ -42,7 +42,7 @@ spec:
         - containerPort: 5001
         env:
         - name: MURL
-          value: "mongodb://192.168.157.204:27017"
+          value: "mongodb://192.168.192.204:27017"
 
 ---
 apiVersion: apps/v1
@@ -67,7 +67,7 @@ spec:
         - containerPort: 5002
         env:
         - name: MURL
-          value: "mongodb://192.168.157.204:27017"
+          value: "mongodb://192.168.192.204:27017"
 
 ---
 apiVersion: apps/v1
@@ -92,7 +92,7 @@ spec:
         - containerPort: 5003
         env:
         - name: MURL
-          value: "mongodb://192.168.157.204:27017"
+          value: "mongodb://192.168.192.204:27017"
 
 ---
 apiVersion: v1
